@@ -7,14 +7,14 @@ const feeds = require('./feeds')
 let port = (process.env.SERVER_PORT || process.env.PORT || 5000 )
 
 app.get('/', function (req, res) {
-  return {
+  res.send( {
     Sports: feeds.sports(),
     Tech: feeds.tech(),
     Business: feeds.business(),
     Science: feeds.science(),
     Health: feeds.health(),
     World: feeds.world()
-  }
+  })
 })
 
 app.listen(port, function () {
