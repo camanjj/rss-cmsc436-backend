@@ -4,7 +4,6 @@ var express = require('express')
 var app = express()
 const querystring = require("querystring");
 const feeds = require('./feeds')
-const summary = require('node-summary');
 const request = require('request');
 
 let port = (process.env.SERVER_PORT || process.env.PORT || 5000 )
